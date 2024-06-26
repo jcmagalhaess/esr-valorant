@@ -5,8 +5,7 @@ module.exports = withNativeFederation({
   name: 'esr-valorant',
 
   exposes: {
-    './Valorant': './src/app/app.component.ts',
-    './routes': '././src/app/app.routes.ts',
+    './routes': './src/app/app.routes.ts',
   },
 
   shared: {

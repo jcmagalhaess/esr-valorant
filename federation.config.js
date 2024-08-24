@@ -2,7 +2,7 @@ const { withNativeFederation, shareAll } = require('@angular-architects/native-f
 
 module.exports = withNativeFederation({
 
-  name: 'esr-valorant',
+  name: 'valorant',
 
   exposes: {
     './routes': './src/app/app.routes.ts',

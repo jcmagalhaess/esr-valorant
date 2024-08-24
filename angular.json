@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"esr-valorant": {
+		"esrValorant": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -19,10 +19,10 @@
 					"options": {},
 					"configurations": {
 						"production": {
-							"target": "esr-valorant:esbuild:production"
+							"target": "esrValorant:esbuild:production"
 						},
 						"development": {
-							"target": "esr-valorant:esbuild:development",
+							"target": "esrValorant:esbuild:development",
 							"dev": true
 						}
 					},
@@ -31,7 +31,7 @@
 				"serve": {
 					"builder": "@angular-architects/native-federation:build",
 					"options": {
-						"target": "esr-valorant:serve-original:development",
+						"target": "esrValorant:serve-original:development",
 						"rebuildDelay": 0,
 						"dev": true,
 						"port": 0
@@ -40,7 +40,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"buildTarget": "esr-valorant:build"
+						"buildTarget": "esrValorant:build"
 					}
 				},
 				"test": {
@@ -65,7 +65,7 @@
 				"esbuild": {
 					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/esr-valorant",
+						"outputPath": "dist/esrValorant",
 						"index": "src/index.html",
 						"browser": "src/main.ts",
 						"polyfills": [
@@ -111,10 +111,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "esr-valorant:esbuild:production"
+							"buildTarget": "esrValorant:esbuild:production"
 						},
 						"development": {
-							"buildTarget": "esr-valorant:esbuild:development"
+							"buildTarget": "esrValorant:esbuild:development"
 						}
 					},
 					"defaultConfiguration": "development",

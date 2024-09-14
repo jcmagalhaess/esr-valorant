@@ -1,0 +1,16 @@
+<div class="container">
+  <h3 class="title">Region</h3>
+  <ul class="list">
+    @for ( region of regions; track $index) {
+    <li class="item">
+      <button class="region">
+        <div class="logo"></div>
+        <span class="name">{{ region.name | uppercase }}</span>
+      </button>
+    </li>
+    }
+  </ul>
+  <div class="action">
+    <button class="btn"> See more </button>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="container">
+  @for( match of matchesToView; track $index){
+  <div
+    class="match"
+    [ngClass]="{ odd: $index % 2 === 0, even: $index % 2 !== 0 }"
+  >
+    <div class="match__date">
+      <span class="hour"> {{ getHour(match.date) }} </span>
+      <span class="day"> {{ getDate(match.date) }} </span>
+    </div>
+
+    <div class="match__teams">
+      <figure class="team">
+        <figcaption class="name">{{ match.team1.name }}</figcaption>
+        <img
+          [src]="match.team1.logoURL"
+          alt="{{ match.team1.name }} logo"
+          class="logo"
+        />
+      </figure>
+
+      <div class="match__scoreboard">
+        @if(match.live){
+            <p>{{ match.team1.score }}</p>
+            <p>-</p>
+            <p>{{ match.team2.score }}</p>
+        } @else if(!match.live && match.finished){
+            <p [ngClass]="{winner: match.team1.winner, loser: !match.team1.winner}"> {{ match.team1.score }} </p>
+            <p>-</p>
+            <p [ngClass]="{winner: match.team1.winner, loser: !match.team2.winner}"> {{ match.team2.score }} </p>
+        } @else {
+          <app-countdown [targetDate]="match.date"></app-countdown>
+        }
+      </div>
+
+      <figure class="team team2">
+        <img
+          [src]="match.team2.logoURL"
+          alt="{{ match.team2.name }} logo"
+          class="logo"
+        />
+        <figcaption class="name">{{ match.team2.name }}</figcaption>
+      </figure>
+    </div>
+
+    <div class="match__status">
+      @if(match.live){
+          <p style="color: #AA0000">Live</p>
+        } @else if(!match.live && match.finished){
+          <p style="color: #454545">Finished</p>
+        } @else {
+            <p style="color: #009005">Upcoming</p>
+        }
+    </div>
+
+    <figure class="match__event">
+      <figcaption>{{ match.event.name }}</figcaption>
+      <img
+        [src]="match.event.logoURL"
+        alt="{{ match.event.name }} logo"
+        class="logo"
+      />
+    </figure>
+  </div>
+  }
+</div>

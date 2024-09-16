@@ -16,7 +16,11 @@
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
-					"options": {},
+          "options": {
+            "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css"
+            ]
+          },
 					"configurations": {
 						"production": {
 							"target": "esrValorant:esbuild:production"
@@ -57,8 +61,9 @@
 							"src/assets"
 						],
 						"styles": [
-							"src/styles.scss"
-						],
+              				"@angular/material/prebuilt-themes/indigo-pink.css",
+              				"src/styles.scss"
+            			],
 						"scripts": []
 					}
 				},

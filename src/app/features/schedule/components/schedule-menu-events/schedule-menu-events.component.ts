@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-menu-events',
+  selector: 'app-schedule-menu-events',
   standalone: true,
   imports: [],
-  templateUrl: './menu-events.component.html',
-  styleUrl: './menu-events.component.scss'
+  templateUrl: './schedule-menu-events.component.html',
+  styleUrl: './schedule-menu-events.component.scss'
 })
-export class MenuEventsComponent {
+export class ScheduleMenuEventsComponent {
   public events = [
     {
       name: 'Valorant Champions 2024',

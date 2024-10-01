@@ -2,13 +2,13 @@ import { UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-menu-region',
+  selector: 'app-schedule-menu-region',
   standalone: true,
   imports: [UpperCasePipe],
-  templateUrl: './menu-region.component.html',
-  styleUrl: './menu-region.component.scss'
+  templateUrl: './schedule-menu-region.component.html',
+  styleUrl: './schedule-menu-region.component.scss'
 })
-export class MenuRegionComponent {
+export class ScheduleMenuRegionComponent {
   public regions = [
     {
       name:'South America',

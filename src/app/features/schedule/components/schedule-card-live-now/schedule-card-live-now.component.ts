@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-card-live-now',
+  selector: 'app-schedule-card-live-now',  
   standalone: true,
   imports: [],
-  templateUrl: './card-live-now.component.html',
-  styleUrl: './card-live-now.component.scss'
+  templateUrl: './schedule-card-live-now.component.html',
+  styleUrl: './schedule-card-live-now.component.scss'
 })
-export class CardLiveNowComponent {
+export class ScheduleCardLiveNowComponent {
   public liveMatch = {
     team1: {
       name: 'LEVIATÁN',

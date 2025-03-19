@@ -1,9 +1,6 @@
 {
   "name": "esr-valorant",
   "version": "1.0.0",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

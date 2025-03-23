@@ -1,1 +1,15 @@
-<p>schedule works!</p>
+<div class="bg-white p-3 rounded-3">
+  <h3 class="schedule__title">Schedule</h3>
+
+  <div class="schedule__scoreboard">
+    @for (link of navLinks; track $index) {
+      <a
+        [routerLink]="link.route"
+        routerLinkActive="schedule__scoreboard-item--active"
+        class="schedule__scoreboard-item"
+        (click)="link.route">
+        {{ link.label }}
+      </a>
+    }
+  </div>
+</div>

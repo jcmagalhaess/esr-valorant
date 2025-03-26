@@ -3,13 +3,15 @@ $component-name: 'schedule';
 .#{$component-name} {
   width: 100%;
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: #4cd0ea;
   }
   &__scoreboard {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 40px;
+    margin-block: 30px;
   }
   &__scoreboard-item {
     text-decoration: none;
@@ -19,8 +21,12 @@ $component-name: 'schedule';
     padding-block-end: 20px;
     font-size: 14px;
     &:hover {
-      color: #000000;
-      border-color: #4cd0ea;
+      @extend .activate;
     }
   }
+}
+
+.activate {
+  color: #000000;
+  border-color: #4cd0ea;
 }

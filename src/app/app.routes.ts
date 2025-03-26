@@ -4,10 +4,14 @@ export const routes: Routes = [
   { path: '', redirectTo: 'schedule', pathMatch: 'full' },
   {
     path: 'schedule',
-    loadComponent: () => import('./features/schedule/containers/schedule/schedule.component').then(m => m.ScheduleComponent),
+    loadChildren: () =>
+      import('./features/schedule/schedule.routes').then((m) => m.routes),
   },
   {
     path: 'ranking',
-    loadComponent: () => import('./features/ranking/containers/ranking/ranking.component').then(m => m.RankingComponent),
+    loadComponent: () =>
+      import('./features/ranking/containers/ranking/ranking.component').then(
+        (m) => m.RankingComponent
+      ),
   },
 ];

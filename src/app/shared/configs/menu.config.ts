@@ -3,18 +3,18 @@ import { IMenu } from '../interfaces/menu.interface';
 export const MENU_SCHEDULE: IMenu[] = [
   {
     label: 'All',
-    route: '/all',
+    route: '/schedule/all',
   },
   {
     label: 'Completed',
-    route: '/completed',
+    route: '/schedule/completed',
   },
   {
     label: 'On Going',
-    route: '/ongoing',
+    route: '/schedule/ongoing',
   },
   {
     label: 'Upcoming',
-    route: '/upcoming',
+    route: '/schedule/upcoming',
   },
 ];

@@ -1,0 +1,139 @@
+$component-name: 'scoreboard';
+
+.#{$component-name} {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  &__title {
+    font-size: 1.8rem;
+    color: #4cd0ea;
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // justify-content: space-between;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      // &:hover {
+      //   background-color: rgba(76, 208, 234, 0.111);
+      // }
+    }
+    &-logo {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background-color: #ffffff;
+      padding: 5px;
+      margin-inline-end: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    &-name {
+      font-size: 16px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+    &:nth-child(odd) {
+      background-color: rgba(76, 208, 234, 0.111);
+    }
+  }
+  &__time {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__hour {
+    font-weight: 800;
+    color: #000;
+    font-size: 1.2rem;
+  }
+  &__date {
+    color: var(--bs-gray-500);
+    font-size: 14px;
+  }
+  &__team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 5px;
+    img {
+      max-width: 90%;
+    }
+  }
+  &__mold {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--bs-gray-100);
+    padding: 5px;
+    border: 2px solid var(--bs-gray-200);
+    &--active-left,
+    &--active-right {
+      border-color: #4cd0ea;
+      z-index: 99999;
+    }
+  }
+  &__name {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  &__team-name {
+    color: var(--bs-gray-500);
+    font-size: .9rem;
+    &--active {
+      font-weight: 600;
+      color: #000000;
+    }
+  }
+  &__score {
+    display: flex;
+    flex-direction: column;
+  }
+  &__score-item {
+    color: var(--bs-gray-500);
+    font-size: .9rem;
+    width: 30px;
+    text-align: end;
+    &--active {
+      font-weight: 600;
+      color: #000000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        background-color: #000000;
+        border-radius: 100%;
+      }
+    }
+  }
+  &__type {
+    color: #4cd0ea;
+    padding-inline: 20px;
+  }
+}

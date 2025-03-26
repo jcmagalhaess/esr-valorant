@@ -10,6 +10,10 @@ module.exports = withNativeFederation({
 
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    // Garanta que estas dependências estão sendo compartilhadas:
+    '@angular/material': { singleton: true, strictVersion: true },
+    '@angular/cdk': { singleton: true, strictVersion: true },
+    '@angular/animations': { singleton: true, strictVersion: true },
   },
 
   skip: [

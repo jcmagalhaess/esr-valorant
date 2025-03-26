@@ -5,11 +5,11 @@
     @for (link of navLinks; track $index) {
       <a
         [routerLink]="link.route"
-        routerLinkActive="schedule__scoreboard-item--active"
-        class="schedule__scoreboard-item"
-        (click)="link.route">
+        routerLinkActive="activate"
+        class="schedule__scoreboard-item">
         {{ link.label }}
       </a>
     }
   </div>
+  <router-outlet></router-outlet>
 </div>
